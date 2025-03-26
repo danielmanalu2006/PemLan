@@ -19,26 +19,26 @@ public class Main {
         bus.boardPassengers(20);   // tambah penumpang
         bus.calculateFare(5);   // total pemberhentian
         bus.stopJourney(); // bus sampai di tujuan
-//        bus.dropPassengers(50);    // semua penumpang turun
+        bus.dropPassengers(50);    // semua penumpang turun
 
         // pindah ke transportasi lain
         System.out.println("=====================================================================");
 
         kereta.startJourney(); // Kereta melakukan perjalanan
         kereta.boardPassengers(150);  // 150 penumpang naik
-//        kereta.boardPassengers(300);    // tambah penumpang
+        kereta.boardPassengers(300);    // tambah penumpang
         kereta.calculateFare();   // Hitung tarif
         kereta.stopJourney(); // Kereta sampai di tujuan
-//        kereta.dropPassengers(150);   // semua penumpang turun
+        kereta.dropPassengers(150);   // semua penumpang turun
 
         // pindah ke transportasi lain
         System.out.println("=====================================================================");
 
         taksi.startJourney(); // Taksi mulai berjalan
         taksi.boardPassengers(3); // 3 penumpang naik
-//        taksi.boardPassengers(10);  // tambah penumpang
+        taksi.boardPassengers(10);  // tambah penumpang
         taksi.calculateFare(10); // Perjalanan sejauh 10 km
         taksi.stopJourney(); // Taksi sampai di tujuan
-//        taksi.dropPassengers(0); // semua penumpang turun
+        taksi.dropPassengers(0); // semua penumpang turun
     }
 }
