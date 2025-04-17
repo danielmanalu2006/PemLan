@@ -1,41 +1,38 @@
-package praktic.geometry.shapes; // Package untuk mengorganisir kelas bntuk geometri
+package praktic.geometry.shapes;
 
-public class Circle {
-    private int id;
-    private double radius;
-    private final int pembilang = 22;
-    private final int penyebut = 7;
+import praktic.geometry.bases.CircularShape;
+import praktic.geometry.interfaces.TwoDimensional;
 
-    // Conctructor tanpa parameter
+public class Circle extends CircularShape implements TwoDimensional {
+
+    // Constructor tanpa parameter
     public Circle() {}
 
-    // Setter untuk ID
-    public void setId(int id) {
-        this.id = id;
+    // Constructor dengan parameter radius
+    public Circle(double radius) {
+        setRadius(radius);  // Set nilai radius yang diberikan
+        setName("Circle");  // Set nama objek menjadi "Circle"
     }
 
-    // Setter untuk radius
-    public void setRadius(double radius) {
-        this.radius = radius;
+    // Implementasi metode untuk menghitung area lingkaran
+    @Override
+    public double getArea() {
+        // Rumus area lingkaran: PI * r^2, tapi menggunakan konstanta PI_NUMERATOR/PI_DENOMINATOR untuk representasi PI
+        return (PI_NUMERATOR * getRadius() * getRadius()) / PI_DENOMINATOR;
     }
 
-    // Getter untuk menghitung keliling lingkaran
-    public double getKeliling() {
-        return 2 * (pembilang / (double) penyebut) * radius;
+    // Implementasi metode untuk menghitung keliling lingkaran
+    @Override
+    public double getPerimeter() {
+        // Rumus keliling lingkaran: 2 * PI * r
+        return (2 * PI_NUMERATOR * getRadius()) / PI_DENOMINATOR;
     }
 
-    // Getter untuk menghitung luas lingkaran
-    public double getLuas() {
-        return (pembilang / (double) penyebut) * radius * radius;
-    }
-
-    // untuk mencetak informasi lingkaran
-    public void printDeskripsi() {
-        System.out.println("===============================================");
-        System.out.println("ID              : " + id);
-        System.out.println("Radius          : " + radius);
-        System.out.println("Keliling        : " + getKeliling());
-        System.out.println("Luas            : " + getLuas());
-        System.out.println("===============================================");
+    // Implementasi metode untuk mencetak informasi tentang lingkaran
+    @Override
+    public void printInfo() {
+        System.out.println("Name               : " + getName());  // Menampilkan nama bentuk (Circle)
+        System.out.println("Area               : " + getArea());  // Menampilkan area lingkaran
+        System.out.println("Perimeter          : " + getPerimeter());  // Menampilkan keliling lingkaran
     }
 }
