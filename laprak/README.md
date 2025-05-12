@@ -20,5 +20,5 @@ Soalnya biar bisa nyimpen wishlist per user, dan aksesnya juga cepet kalau mau l
 
 ### Tampil di Menu Mana?
 Fitur wishlist ini bisa diakses lewat:
-**7. Add to Wishlist**
+**7. Add to Wishlist, dan**
 **8. View Wishlist**
