@@ -38,3 +38,5 @@ Contoh marga valid: Manalu, Sitorus...
 
 Masukkan marga anda: Manalu
 Marga valid! 'Horas, amang/inang Manalu!'
+
+![image](https://github.com/user-attachments/assets/0a057e4d-ec14-48e2-ac95-6bea6a425b84)
